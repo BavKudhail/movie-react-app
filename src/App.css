@@ -58,3 +58,27 @@ h1 {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.search img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  height: 450px;
+  margin: 1.5rem;
+
+  position: relative;
+  border-radius: 30px;
+}
