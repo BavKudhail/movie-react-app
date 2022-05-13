@@ -18,10 +18,10 @@ const App = () => {
     // pass movie search data into setMovies function
     setMovies(data.Search);
   };
-  
+
   return (
     <div className="app">
-      <h1>MovieMix</h1>
+      <h1>MOVIEMIX</h1>
       <div className="search">
         <input
           placeholder="search for movies"
