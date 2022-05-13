@@ -8,13 +8,18 @@ const App = () => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
-    console.log(data);
+    console.log(data.Search);
   };
   useEffect(() => {
     searchMovies("batman");
   }, []);
 
-  return <h1>App</h1>;
+  return (
+    <>
+      <h1>MOVIE TITLE</h1>
+      <h1>MOVIE POSTER</h1>
+    </>
+  );
 };
 
 export default App;
