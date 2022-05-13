@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import searchIcon from "./search.svg";
 import "./App.css";
+import "./MovieCard";
+import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com?apikey=3bc9520b";
 
@@ -37,7 +39,7 @@ const App = () => {
         <img src={searchIcon} alt="search" onClick={() => {}} />
       </div>
       <div className="container">
-        
+        <MovieCard movie1={movie1} />
       </div>
     </div>
   );
