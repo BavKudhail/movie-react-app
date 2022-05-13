@@ -5,15 +5,6 @@ import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com?apikey=3bc9520b";
 
-const movie1 = {
-  Poster:
-    "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-  Title: "Batman Begins",
-  Type: "movie",
-  Year: "2005",
-  imdbID: "tt0372784",
-};
-
 const App = () => {
   // movies hook
   const [movies, setMovies] = useState([]);
@@ -28,7 +19,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("batman");
+    searchMovies("marvel");
   }, []);
 
   return (
@@ -42,11 +33,19 @@ const App = () => {
         />
         <img src={searchIcon} alt="search" onClick={() => {}} />
       </div>
-      <div className="container">
-        {movies.map((movie) => {
-          return <MovieCard movie1={movie} />;
-        })}
-      </div>
+      {movies.length > 0 ? (
+        movies.map((movie) => {
+          return (
+            <div className="container">
+              <MovieCard movie1={movie} />
+            </div>
+          );
+        })
+      ) : (
+        <div className="no-movies">
+          <h2>No movies found</h2>
+        </div>
+      )}
     </div>
   );
 };
